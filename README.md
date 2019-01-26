@@ -8,4 +8,4 @@ Installation
 `<link href="css/dun-file-uploader.css" rel="stylesheet">` <br/>
 `<script src="js/dun-file-uploader.js"></script>` <br/>
 
-3. Sample Use in index.html files
+Sample Use in index.html files
