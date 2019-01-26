@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dun File Uploader</title>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="css/dun-file-uploader.css" rel="stylesheet" >
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="js/dun-file-uploader.js"></script>
+	<script>
+	
+		$(function(){
+			$("#fileUpload1").dunFileUploader();
+			$("#fileUpload1").dunFileUploader().SetImagePreview("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST0HuSoWxSJa6xNCRO0y3rT55WGt5BXPbKOBW6T0JhSWrVAIWDdA");
+			
+			$("#fileUpload2").dunFileUploader();
+		});
+		
+		function GetURL()
+		{
+			alert($("#fileUpload1").dunFileUploader().GetFileUrl());
+		}
+		function GetFile()
+		{
+			console.log($("#fileUpload1").dunFileUploader().GetImageFile());
+		}
+	
+	
+	</script>
+</head>
+<body>
+		
+		<div class="container">
+			<div class="row">    
+				<div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"> 
+					<div id="fileUpload1"></div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">    
+				<div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"> 
+					<div id="fileUpload2"></div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<button onclick="GetURL()"> GetURL </button>
+		<button onclick="GetFile()"> GetFile </button>
+
+</body>
+</html>
